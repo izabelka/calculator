@@ -13,6 +13,7 @@ class App extends Component {
     };
     this.displayDigits = this.displayDigits.bind(this);
     this.addDigits = this.addDigits.bind(this);
+    this.subtractDigits = this.subtractDigits.bind(this);
     this.showResult = this.showResult.bind(this);
   }
 
@@ -40,12 +41,27 @@ class App extends Component {
     })
   }
 
+  subtractDigits() {
+    var prevResult = this.state.result
+    this.setState({
+      result: parseInt(this.state.displayer) - prevResult,
+      method: 'subtract',
+      updateDisplayer: false
+    })
+  }
+
   showResult() {
     var displayedResult = this.state.result
     var newResult = parseInt(this.state.displayer)
     if(this.state.method === 'add') {
       this.setState({
         displayer: displayedResult + newResult,
+        result: 0,
+        updateDisplayer: false
+      })
+    } else if(this.state.method === 'subtract') {
+      this.setState({
+        displayer: displayedResult - newResult,
         result: 0,
         updateDisplayer: false
       })
@@ -62,6 +78,9 @@ class App extends Component {
         <Buttons addToDisplayer={this.displayDigits}/>
         <div onClick={this.addDigits}>
         +
+        </div>
+        <div onClick={this.subtractDigits}>
+        -
         </div>
         <div onClick={this.showResult}>
         =
