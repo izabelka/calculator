@@ -19,21 +19,19 @@ class App extends Component {
   displayDigits(digit) {
     var prevDigit = this.state.displayer;
     if (this.state.updateDisplayer) {
+      console.log('zero')
       this.setState({
         displayer: prevDigit + digit
       })
     } else {
-      if (digit !== '0') {
         this.setState({
           displayer: digit,
           updateDisplayer: true
         })
-      }
     }
   }
 
   addDigits() {
-    var newResult = parseInt(this.state.displayer)
     var prevResult = this.state.result
     this.setState({
       result: parseInt(this.state.displayer) + prevResult,
@@ -48,7 +46,8 @@ class App extends Component {
     if(this.state.method === 'add') {
       this.setState({
         displayer: displayedResult + newResult,
-        result: 0
+        result: 0,
+        updateDisplayer: false
       })
     }
 
