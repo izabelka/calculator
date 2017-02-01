@@ -14,6 +14,8 @@ class App extends Component {
     this.displayDigits = this.displayDigits.bind(this);
     this.addDigits = this.addDigits.bind(this);
     this.subtractDigits = this.subtractDigits.bind(this);
+    this.multiplyDigits = this.multiplyDigits.bind(this);
+    this.divideDigits = this.divideDigits.bind(this);
     this.showResult = this.showResult.bind(this);
   }
 
@@ -50,6 +52,22 @@ class App extends Component {
     })
   }
 
+  multiplyDigits() {
+    this.setState({
+      result: parseInt(this.state.displayer),
+      method: 'multiply',
+      updateDisplayer: false
+    })
+  }
+
+  divideDigits() {
+    this.setState({
+      result: parseInt(this.state.displayer),
+      method: 'divide',
+      updateDisplayer: false
+    })
+  }
+
   showResult() {
     var displayedResult = this.state.result
     var newResult = parseInt(this.state.displayer)
@@ -62,6 +80,18 @@ class App extends Component {
     } else if(this.state.method === 'subtract') {
       this.setState({
         displayer: displayedResult - newResult,
+        result: 0,
+        updateDisplayer: false
+      })
+    } else if(this.state.method === 'multiply') {
+      this.setState({
+        displayer: displayedResult * newResult,
+        result: 0,
+        updateDisplayer: false
+      })
+    } else {
+      this.setState({
+        displayer: displayedResult / newResult,
         result: 0,
         updateDisplayer: false
       })
@@ -81,6 +111,12 @@ class App extends Component {
         </div>
         <div onClick={this.subtractDigits}>
         -
+        </div>
+        <div onClick={this.multiplyDigits}>
+        *
+        </div>
+        <div onClick={this.divideDigits}>
+        /
         </div>
         <div onClick={this.showResult}>
         =
