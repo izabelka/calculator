@@ -107,20 +107,22 @@ class App extends Component {
           {this.state.displayer}
         </div>
         <Buttons addToDisplayer={this.displayDigits}/>
-        <div onClick={this.addDigits}>
-        +
-        </div>
-        <div onClick={this.subtractDigits}>
-        -
-        </div>
-        <div onClick={this.multiplyDigits}>
-        *
-        </div>
-        <div onClick={this.divideDigits}>
-        /
-        </div>
-        <div onClick={this.showResult}>
-        =
+        <div id="operations">
+          <div onClick={this.addDigits}>
+          +
+          </div>
+          <div onClick={this.subtractDigits}>
+          -
+          </div>
+          <div onClick={this.multiplyDigits}>
+          *
+          </div>
+          <div onClick={this.divideDigits}>
+          /
+          </div>
+          <div onClick={this.showResult}>
+          =
+          </div>
         </div>
       </div>
     );

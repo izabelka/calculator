@@ -17,7 +17,7 @@ class Buttons extends Component {
 
 	render() {
 		return (
-    	<div className="calculator-buttons">
+    	<div id="calculator-buttons">
       	{buttons.map((button) =>
         	<span key={button.toString()}
           value={button} onClick={this.onButtonClick.bind(this, button)}> {button} </span>
