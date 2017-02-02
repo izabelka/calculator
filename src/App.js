@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Buttons from './Buttons'
+import './reset.css';
 import './App.css';
 
 class App extends Component {
