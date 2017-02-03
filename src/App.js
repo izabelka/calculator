@@ -23,7 +23,6 @@ class App extends Component {
   displayDigits(digit) {
     var prevDigit = this.state.displayer;
     if (this.state.updateDisplayer) {
-      console.log('zero')
       this.setState({
         displayer: prevDigit + digit
       })
