@@ -104,7 +104,7 @@ class App extends Component {
     return (
       <div id="calculator-container">
         <div id="display-results">
-          {this.state.displayer}
+          <span>{this.state.displayer}</span>
         </div>
         <Buttons addToDisplayer={this.displayDigits}/>
         <div id="operations">
