@@ -12,8 +12,8 @@ I am creating a simple calculator in React JS.
 2. [x] Set result as state
 4. [x] Add adding
 5. [x] Add subtracting
-6. [x] Add myltiplying
+6. [x] Add multiplying
 7. [x] Add dividing
 8. [x] Handle zero
 9. [ ] Add styles
-10. [ ] Publish on Github Pages 
+10. [ ] Publish on Github Pages
