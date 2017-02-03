@@ -38,7 +38,7 @@ class App extends Component {
   addDigits() {
     var prevResult = this.state.result
     this.setState({
-      result: parseInt(this.state.displayer) + prevResult,
+      result: parseInt(this.state.displayer, 10) + prevResult,
       method: 'add',
       updateDisplayer: false
     })
@@ -47,7 +47,7 @@ class App extends Component {
   subtractDigits() {
     var prevResult = this.state.result
     this.setState({
-      result: parseInt(this.state.displayer) - prevResult,
+      result: parseInt(this.state.displayer, 10) - prevResult,
       method: 'subtract',
       updateDisplayer: false
     })
@@ -55,7 +55,7 @@ class App extends Component {
 
   multiplyDigits() {
     this.setState({
-      result: parseInt(this.state.displayer),
+      result: parseInt(this.state.displayer, 10),
       method: 'multiply',
       updateDisplayer: false
     })
@@ -63,7 +63,7 @@ class App extends Component {
 
   divideDigits() {
     this.setState({
-      result: parseInt(this.state.displayer),
+      result: parseInt(this.state.displayer, 10),
       method: 'divide',
       updateDisplayer: false
     })
@@ -71,7 +71,7 @@ class App extends Component {
 
   showResult() {
     var displayedResult = this.state.result
-    var newResult = parseInt(this.state.displayer)
+    var newResult = parseInt(this.state.displayer, 10)
     if(this.state.method === 'add') {
       this.setState({
         displayer: displayedResult + newResult,
