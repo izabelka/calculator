@@ -15,5 +15,5 @@ I am creating a simple calculator in React JS.
 6. [x] Add multiplying
 7. [x] Add dividing
 8. [x] Handle zero
-9. [ ] Add styles
-10. [ ] Publish on Github Pages
+9. [x] Add styles
+10. [x] Publish on Github Pages
