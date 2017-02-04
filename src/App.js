@@ -18,6 +18,7 @@ class App extends Component {
     this.multiplyDigits = this.multiplyDigits.bind(this);
     this.divideDigits = this.divideDigits.bind(this);
     this.showResult = this.showResult.bind(this);
+    this.clear = this.clear.bind(this);
   }
 
   displayDigits(digit) {
@@ -96,12 +97,19 @@ class App extends Component {
         updateDisplayer: false
       })
     }
+  }
 
+  clear() {
+    this.setState({
+      displayer: 0,
+      updateDisplayer: false
+    })
   }
 
   render() {
     return (
       <div id="calculator-container">
+        <span id="ac" onClick={this.clear}>AC</span>
         <div id="display-results">
           <span>{this.state.displayer}</span>
         </div>
