@@ -5,7 +5,7 @@
 
 I am creating a simple calculator in React JS.
 
-**Demo:** not available yet
+**Demo:** [https://izabelka.github.io/calculator](https://izabelka.github.io/calculator)
 
 ### To do:
 1. [x] Manage displayer and formulas
